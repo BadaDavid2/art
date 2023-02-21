@@ -38,19 +38,41 @@ header{
     color: rgba(46, 56, 58, 1);
     text-transform: capitalize;
 }
-@media only screen and (min-width:300px) and (max-width:600px){
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    nav .links ul{
+        display: none !important;
+    }
     nav, main {
         width: calc( 100vw - 50px) !important;
     }
-    main .text{
+    nav .searchIcon{
+        margin-right: 10px !important;
+    }
+    main{
         flex-direction: column;
+    }
+    main .text{
+        flex-direction: row !important;
         
     }
     main .text, main .text .imgShadow{
-        margin-right: auto;
+        margin-right: auto !important;
     }
     .art-text{
-        visibility: visible;
+        visibility: visible !important;
+    }
+    main .text .imgShadow{
+        width: 200px !important;
+        height: 253px !important;
+    }
+    main .text .imgShadow::after{
+        width: 200px !important;
+        height: 253px !important;
+        left: 20px !important;
+        transform: skewX(-6.99deg) !important;
+    }
+    main .text .imgShadow .artTitle{
+        right: -100px !important;
     }
     main .img .img1{
         top: 0px !important;
@@ -62,7 +84,7 @@ header{
         width: 100% !important;
     }
     main .img .img2 img{
-        width: 100%;
+        width: 100% !important;
     }
     main .img .img3{
         top: 0px !important;
@@ -106,8 +128,41 @@ header{
         line-height: 25px !important;
         
     }
+    main .img{
+        gap: 30px;
+    }
+    main .img .img1{
+        top: 0px !important;
+        left: 0px !important;
+    }
+    main .img .img3{
+        right: 0px !important;
+        top: auto;
+    
+    }
+    main .img .img4{
+        left: 0px !important;
+        bottom: 0px !important;
+    }
+    main .img .img4 img{
+        filter: brightness(160%);
+    }
+    main .img:hover .img1{
+        transform: translateX(0px) !important;
+    }
+    main .img:hover .img2{
+        transform: translateX(0px) !important;
+        transform: rotateZ('') !important;
+    }
+    main .img:hover .img3{
+        transform: translateX(0px) !important;
+        z-index: 30;
+    }
+    main .img:hover .img4{
+        transform: translateX(0px) !important;
+    } 
 }
-@media only screen and (min-width:600px) and (max-width: 1024px) {
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
     nav .links{
         width: fit-content !important;
     }
@@ -126,7 +181,7 @@ header{
     }
     main .text{
         display: flex;
-        gap: 50px;
+        gap: 20px;
         flex-direction: row !important;
         align-items: center;
         flex-direction: column;
